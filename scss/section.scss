@@ -1,24 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
 $bl: #212125;
 $ylow: #fbd46d;
 $bg: #eee;
 $fa: #fafafa;
 $cc: #ccc;
-@mixin btn {
-  background-color: $ylow;
-  color: $bl;
-  min-width: 15rem;
-  padding: 1rem;
-  border: none;
-  border-radius: 5rem;
-  font-size: 0.9rem;
-  margin: 2rem auto;
-  cursor: pointer;
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 
 body {
   margin: 0;
@@ -26,6 +12,8 @@ body {
   background-color: $bg;
   font-family: "Nunito", sans-serif;
 }
+
+// Main section
 
 .menu {
   position: absolute;
@@ -69,7 +57,19 @@ body {
     outline-color: $ylow;
   }
   .btn {
-    @include btn;
+    background-color: $ylow;
+    color: $bl;
+    min-width: 15rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 5rem;
+    font-size: 0.9rem;
+    margin: 2rem auto;
+    cursor: pointer;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
   .out {
     margin: 0.05rem auto;
@@ -89,6 +89,27 @@ body {
     outline-color: $ylow;
   }
 }
+
+// Footer
+
+.footer {
+  background-color: $fa;
+  position: absolute;
+  text-align: center;
+  color: $bl;
+  top: 101%;
+  width: 100%;
+}
+
+.footer-p {
+  padding: 0.7rem;
+}
+
+.link {
+  color: $bl;
+}
+
+// Media Query
 
 @media only screen and (max-width: 425px) {
   body {
