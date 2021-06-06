@@ -1,13 +1,16 @@
 @import "./section.scss";
 
 .footer {
-  position: absolute;
-  top: 101%;
   background-color: $fa;
-  width: 100%;
+  position: absolute;
   text-align: center;
   color: $bl;
-  padding: 0.5rem;
+  top: 101%;
+  width: 100%;
+}
+
+.footer-p {
+  padding: 0.7rem;
 }
 
 .link {
