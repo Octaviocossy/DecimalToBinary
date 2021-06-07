@@ -10,18 +10,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "app": () => (/* binding */ app)
 /* harmony export */ });
 /* harmony import */ var _binaryLogic_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _render_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _renderMenu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _renderResults__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+
 
 
 
 const app = () => {
+  (0,_renderMenu_js__WEBPACK_IMPORTED_MODULE_1__.renderMenu)();
   const btn = document.getElementById("btn");
   const number = document.getElementById("numberInp");
-
   number.addEventListener("keyup", (x) => {
     if (number.value != "") {
       if (x.keyCode === 13) {
-        (0,_render_js__WEBPACK_IMPORTED_MODULE_1__.render)((0,_binaryLogic_js__WEBPACK_IMPORTED_MODULE_0__.binaryLogic)(number.value));
+        (0,_renderResults__WEBPACK_IMPORTED_MODULE_2__.renderResults)((0,_binaryLogic_js__WEBPACK_IMPORTED_MODULE_0__.binaryLogic)(number.value));
       }
     } else {
       alert("Enter a number in the input");
@@ -30,7 +32,7 @@ const app = () => {
   btn.addEventListener("click", (x) => {
     x.preventDefault();
     if (number.value != "") {
-      (0,_render_js__WEBPACK_IMPORTED_MODULE_1__.render)((0,_binaryLogic_js__WEBPACK_IMPORTED_MODULE_0__.binaryLogic)(number.value));
+      (0,_renderResults__WEBPACK_IMPORTED_MODULE_2__.renderResults)((0,_binaryLogic_js__WEBPACK_IMPORTED_MODULE_0__.binaryLogic)(number.value));
     } else {
       alert("Enter a number in the input");
     }
@@ -76,19 +78,20 @@ const binaryLogic = (n) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */   "renderMenu": () => (/* binding */ renderMenu)
 /* harmony export */ });
-const menu = document.getElementById("menu");
-const number = document.getElementById("numberInp");
-
-const render = (r) => {
-  let html = `<div class="title-div">
-                <h2 class="title">Decimal to Binary</h2>
-                <h2 class="title">Result 🎉</h2>
-              </div>
-              <label class="txt" for>Decimal number (${number.value}) converted to binary:</label>
-              <textarea readonly type="text" class="out" id="out">${r}</textarea>
-              <button onClick="window.location.reload();" class="btn" id="gBack">Go Back</button>`;
+const renderMenu = () => {
+  const menu = document.getElementById("main");
+  let html = `
+  <div class="menu" id="menu">
+    <div class="title-div">
+      <h1 class="title">Decimal to Binary</h1>
+      <h1 class="title_2">Converter</h1>
+    </div>
+    <label class="txt" for="">Enter a decimal number to know its binary equivalent.</label>
+    <input class="inp" type="number" id="numberInp" name="NumberBox" placeholder="Number"/>
+    <button class="btn" id="btn">Convert</button>
+  </div>`;
   menu.innerHTML = html;
 };
 
@@ -99,11 +102,40 @@ const render = (r) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderResults": () => (/* binding */ renderResults)
+/* harmony export */ });
+/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+
+const renderResults = (r) => {
+  const menu = document.getElementById("menu");
+  const number = document.getElementById("numberInp");
+  let html = `<div class="title-div">
+                <h2 class="title">Decimal to Binary</h2>
+                <h2 class="title">Result 🎉</h2>
+              </div>
+              <label class="txt" for>Decimal number (${number.value}) converted to binary:</label>
+              <textarea readonly type="text" class="out" id="out">${r}</textarea>
+              <button class="btn" id="gBack">Go Back</button>`;
+  menu.innerHTML = html;
+  const gbackBtn = document.getElementById("gBack");
+  gbackBtn.addEventListener("click", () => {
+    (0,_app_js__WEBPACK_IMPORTED_MODULE_0__.app)();
+  });
+};
+
+
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 
             
 
@@ -119,7 +151,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_main_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
@@ -393,14 +425,14 @@ module.exports = function (list, options) {
 };
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 // Imports
 
@@ -413,7 +445,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n  margin: 0;\n  padding: 0;\n 
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ ((module) => {
 
 
@@ -557,7 +589,7 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_app_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 
 
 
