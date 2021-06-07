@@ -17,4 +17,4 @@ Created with:
 - [ ] Decimal to Hexadecimal
 - [ ] Decimal to Octal
 
-<center><img src="https://i.imgur.com/hJxFFJT.gif" width="800"/></center>
+<center><img src="https://i.imgur.com/4pK8GoO.gif" width="800"/></center>
