@@ -83,15 +83,21 @@ __webpack_require__.r(__webpack_exports__);
 const renderMenu = () => {
   const menu = document.getElementById("main");
   let html = `
-  <div class="menu" id="menu">
-    <div class="title-div">
-      <h1 class="title">Decimal to Binary</h1>
-      <h1 class="title_2">Converter</h1>
+  <section>
+   <div class="menu" id="menu">
+      <div class="title-div">
+        <h1 class="title">Decimal to Binary</h1>
+        <h1 class="title_2">Converter</h1>
+      </div>
+      <label class="txt" for="">Enter a decimal number to know its binary equivalent.</label>
+      <input class="inp" type="number" id="numberInp" name="NumberBox" placeholder="Number"/>
+      <button class="btn" id="btn">Convert</button>
     </div>
-    <label class="txt" for="">Enter a decimal number to know its binary equivalent.</label>
-    <input class="inp" type="number" id="numberInp" name="NumberBox" placeholder="Number"/>
-    <button class="btn" id="btn">Convert</button>
-  </div>`;
+  </section>
+  <footer class="footer">
+    <p class="footer-p">Made with 💛 By<a href="https://github.com/Octaviocossy" target="_blank" class="link">Octavio</a>.</p>
+  </footer>`;
+
   menu.innerHTML = html;
 };
 
@@ -108,15 +114,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const renderResults = (r) => {
-  const menu = document.getElementById("menu");
+  const menu = document.getElementById("main");
   const number = document.getElementById("numberInp");
-  let html = `<div class="title-div">
-                <h2 class="title">Decimal to Binary</h2>
-                <h2 class="title">Result 🎉</h2>
-              </div>
-              <label class="txt" for>Decimal number (${number.value}) converted to binary:</label>
-              <textarea readonly type="text" class="out" id="out">${r}</textarea>
-              <button class="btn" id="gBack">Go Back</button>`;
+  let html = `
+ <section>
+   <div class="menu" id="menu">
+    <div class="title-div">
+      <h2 class="title">Decimal to Binary</h2>
+      <h2 class="title">Result 🎉</h2>
+    </div>
+    <label class="txt" for>Decimal number (${number.value}) converted to binary:</label>
+    <textarea readonly type="text" class="out" id="out">${r}</textarea>
+    <button class="btn" id="gBack">Go Back</button>
+ </section>
+ <footer class="footer">
+    <p class="footer-p">Made with 💛 By<a href="https://github.com/Octaviocossy" target="_blank" class="link">Octavio</a>.</p>
+ </footer>`;
+
   menu.innerHTML = html;
   const gbackBtn = document.getElementById("gBack");
   gbackBtn.addEventListener("click", () => {
