@@ -25,8 +25,6 @@ const app = () => {
       if (x.keyCode === 13) {
         (0,_renderResults__WEBPACK_IMPORTED_MODULE_2__.renderResults)((0,_binaryLogic_js__WEBPACK_IMPORTED_MODULE_0__.binaryLogic)(number.value));
       }
-    } else {
-      alert("Enter a number in the input");
     }
   });
   btn.addEventListener("click", (x) => {
@@ -90,14 +88,13 @@ const renderMenu = () => {
         <h1 class="title_2">Converter</h1>
       </div>
       <label class="txt" for="">Enter a decimal number to know its binary equivalent.</label>
-      <input class="inp" type="number" id="numberInp" name="NumberBox" placeholder="Number"/>
+      <input class="inp" type="number" id="numberInp" name="NumberBox" placeholder="Number" autofocus/>
       <button class="btn" id="btn">Convert</button>
     </div>
   </section>
   <footer class="footer">
     <p class="footer-p">Made with 💛 By<a href="https://github.com/Octaviocossy" target="_blank" class="link">Octavio</a>.</p>
   </footer>`;
-
   menu.innerHTML = html;
 };
 
@@ -110,9 +107,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "renderResults": () => (/* binding */ renderResults)
 /* harmony export */ });
-/* harmony import */ var _app_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-
-
 const renderResults = (r) => {
   const menu = document.getElementById("main");
   const number = document.getElementById("numberInp");
@@ -130,11 +124,17 @@ const renderResults = (r) => {
  <footer class="footer">
     <p class="footer-p">Made with 💛 By<a href="https://github.com/Octaviocossy" target="_blank" class="link">Octavio</a>.</p>
  </footer>`;
-
   menu.innerHTML = html;
-  const gbackBtn = document.getElementById("gBack");
-  gbackBtn.addEventListener("click", () => {
-    (0,_app_js__WEBPACK_IMPORTED_MODULE_0__.app)();
+  document.getElementById("main").addEventListener("keypress", (x) => {
+    if (x.key === "Enter") {
+      location.reload();
+    }
+  });
+  document.getElementById("out").addEventListener("click", () => {
+    location.reload();
+  });
+  document.getElementById("gBack").addEventListener("click", () => {
+    location.reload();
   });
 };
 
