@@ -11,8 +11,6 @@ export const app = () => {
       if (x.keyCode === 13) {
         renderResults(binaryLogic(number.value));
       }
-    } else {
-      alert("Enter a number in the input");
     }
   });
   btn.addEventListener("click", (x) => {

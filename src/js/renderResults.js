@@ -1,5 +1,3 @@
-import { app } from "./app.js";
-
 export const renderResults = (r) => {
   const menu = document.getElementById("main");
   const number = document.getElementById("numberInp");
@@ -17,10 +15,16 @@ export const renderResults = (r) => {
  <footer class="footer">
     <p class="footer-p">Made with 💛 By<a href="https://github.com/Octaviocossy" target="_blank" class="link">Octavio</a>.</p>
  </footer>`;
-
   menu.innerHTML = html;
-  const gbackBtn = document.getElementById("gBack");
-  gbackBtn.addEventListener("click", () => {
-    app();
+  document.getElementById("main").addEventListener("keypress", (x) => {
+    if (x.key === "Enter") {
+      location.reload();
+    }
+  });
+  document.getElementById("out").addEventListener("click", () => {
+    location.reload();
+  });
+  document.getElementById("gBack").addEventListener("click", () => {
+    location.reload();
   });
 };

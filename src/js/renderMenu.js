@@ -8,13 +8,12 @@ export const renderMenu = () => {
         <h1 class="title_2">Converter</h1>
       </div>
       <label class="txt" for="">Enter a decimal number to know its binary equivalent.</label>
-      <input class="inp" type="number" id="numberInp" name="NumberBox" placeholder="Number"/>
+      <input class="inp" type="number" id="numberInp" name="NumberBox" placeholder="Number" autofocus/>
       <button class="btn" id="btn">Convert</button>
     </div>
   </section>
   <footer class="footer">
     <p class="footer-p">Made with 💛 By<a href="https://github.com/Octaviocossy" target="_blank" class="link">Octavio</a>.</p>
   </footer>`;
-
   menu.innerHTML = html;
 };
