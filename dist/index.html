@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="imgur"
+      sizes="32x32"
+      href="https://i.imgur.com/42bkLXR.png"
+    />
+    <title>Decimal to Binary Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <div id="root">
+      <main class="main">
+        <div class="main--div">
+          <p class="main--div__p">Decimal to Binary</p>
+          <p class="main--div__p">Converter</p>
+          <label class="main--div__label" for=""
+            >Enter a decimal number to know its binary equivalent.</label
+          >
+          <input
+            class="main--div__input"
+            type="number"
+            id="numberInp"
+            placeholder="Ej: 241..."
+            autofocus
+          />
+          <button class="main--div__button" id="btn">Convert</button>
+          <ul id="results" class="main--ul"></ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
