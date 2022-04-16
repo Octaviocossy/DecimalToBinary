@@ -1,8 +1,9 @@
-$bl: #212125;
-$ylow: #fbd46d;
-$bg: #eee;
-$fa: #fafafa;
-$cc: #ccc;
+$text1: #434343;
+$text2: #585858;
+$white: #fafafa;
+$green: #83f3bd;
+$greenHover: #a0f3cb;
+$red: #fb6d6d;
 
 * {
   margin: 0;
@@ -21,20 +22,20 @@ $cc: #ccc;
       font-size: 3rem;
       font-weight: 600;
       text-align: center;
-      color: #434343;
+      color: $text1;
     }
     &__label {
       margin-top: 2rem;
       font-size: 1.3rem;
       max-width: 20rem;
-      color: #585858;
+      color: $text1;
     }
     &__input {
       margin-top: 2rem;
       margin-bottom: 2rem;
-      background-color: #fafafa;
+      background-color: $white;
       padding: 1rem;
-      color: #585858;
+      color: $text2;
       border: none;
       font-size: 1rem;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
@@ -46,15 +47,15 @@ $cc: #ccc;
     &__button {
       padding: 1rem;
       border: none;
-      color: #585858;
+      color: $text2;
       font-size: 1rem;
       cursor: pointer;
-      background-color: #83f3bd;
+      background-color: $green;
       transition-duration: 0.5s;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
         rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
       &:hover {
-        background-color: #a0f3cb;
+        background-color: $greenHover;
       }
     }
   }
@@ -72,21 +73,21 @@ $cc: #ccc;
         rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
       margin: 1rem 0;
       padding: 1rem 1rem;
-      background-color: #fafafa;
+      background-color: $white;
       &--p {
         flex: 1;
         font-size: 1rem;
-        color: #585858;
+        color: $text2;
       }
       &--btn {
-        color: #585858;
-        background-color: #fafafa;
+        color: $text2;
+        background-color: $white;
         margin-left: 1rem;
         border: none;
         cursor: pointer;
         font-size: 1rem;
         &:hover {
-          color: #fb6d6d;
+          color: $red;
         }
       }
     }

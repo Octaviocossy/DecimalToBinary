@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-export const App = () => {
+const App = () => {
   const btn = document.getElementById("btn");
   const input = document.getElementById("numberInp");
   let results = [];
