@@ -1,20 +1,15 @@
-# Decimal to Binary converter 🚀
+# 🚀 Decimal to Binary Converter 🚀
 
-## About this project 📖<br>
-This project was created with the intention of practicing CSS, JavaScript logic and some HTML5.
+Convierte números decimales a binarios, este proyecto surge de la idea de conectar dos asignaturas de la universidad, Sistema de procesamiento de datos y Programación.
+## Tecnologías Utilizadas 💻
 
-## Technologies:
+- JavaScript
+- Sass
+- HTML
+- Webpack
 
-Created with:
+<img src="./assets/decimaltobinarypic.png" />
 
-- HTML5 <br>
-- Sass <br>
-- JavaScript <br>
-- Webpack <br>
+---
 
-## To do list:
-- [ ] History of numbers converted
-- [ ] Decimal to Hexadecimal
-- [ ] Decimal to Octal
-
-<center><img src="https://i.imgur.com/4pK8GoO.gif" width="800"/></center>
+[DEMO](https://decimaltobinary.vercel.app/)
